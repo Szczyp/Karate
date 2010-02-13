@@ -17,6 +17,8 @@ using IronRuby;
 
 using NHibernate;
 using Karate.Data;
+using Karate.Models;
+using Karate.Data.Entities;
 
 namespace Karate
 {

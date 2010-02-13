@@ -44,16 +44,19 @@ class Test
 	end
 end
 
+class Cinch::EditableValidatingObject
+	def self.attr_notify name
+		attr_reader name
+		define_method "#{name}=" do |value|
+			instance_variable_set "@#{name}", value
+			NotifyPropertyChanged name
+		end
+	end
+end
+
 class Test2 < Cinch::EditableValidatingObject
 	
-	def notify
-		@notify
-	end
-
-	def notify= value
-		@notify = value
-		NotifyPropertyChanged :notify
-	end
+	attr_notify :notify
 
 	def initialize
 		puts methods.join "\n"

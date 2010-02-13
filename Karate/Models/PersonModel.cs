@@ -4,14 +4,12 @@ using System.Linq;
 using System.Text;
 using System.ComponentModel;
 using Cinch;
+using Karate.Data.Entities;
 
 namespace Karate.Models
 {
-    class PeronModel : EditableValidatingObject
+    class PersonModel
     {
-        public PeronModel()
-        {
-            var a = 0;
-        }
+
     }
 }
