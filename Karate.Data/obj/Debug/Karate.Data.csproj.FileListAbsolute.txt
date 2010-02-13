@@ -1,0 +1,10 @@
+C:\Users\qb\Documents\Visual Studio 2010\Projects\Karate\Karate.Data\bin\Debug\Karate.Data.dll
+C:\Users\qb\Documents\Visual Studio 2010\Projects\Karate\Karate.Data\bin\Debug\Karate.Data.pdb
+C:\Users\qb\Documents\Visual Studio 2010\Projects\Karate\Karate.Data\bin\Debug\FluentNHibernate.dll
+C:\Users\qb\Documents\Visual Studio 2010\Projects\Karate\Karate.Data\bin\Debug\NHibernate.dll
+C:\Users\qb\Documents\Visual Studio 2010\Projects\Karate\Karate.Data\bin\Debug\Iesi.Collections.dll
+C:\Users\qb\Documents\Visual Studio 2010\Projects\Karate\Karate.Data\bin\Debug\Antlr3.Runtime.dll
+C:\Users\qb\Documents\Visual Studio 2010\Projects\Karate\Karate.Data\bin\Debug\log4net.dll
+C:\Users\qb\Documents\Visual Studio 2010\Projects\Karate\Karate.Data\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\qb\Documents\Visual Studio 2010\Projects\Karate\Karate.Data\obj\Debug\Karate.Data.dll
+C:\Users\qb\Documents\Visual Studio 2010\Projects\Karate\Karate.Data\obj\Debug\Karate.Data.pdb

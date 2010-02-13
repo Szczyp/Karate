@@ -1,0 +1,15 @@
+﻿<Window x:Class="Karate.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Label Name="rubyLabel"/>
+        <Label Grid.Row="1" Name="pythonLabel" Content="{Binding notify}"/>
+        <Button Grid.Row="2" Click="Button_Click" Content="notify" Margin="30" />
+    </Grid>
+</Window>
