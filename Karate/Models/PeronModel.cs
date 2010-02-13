@@ -11,7 +11,7 @@ namespace Karate.Models
     {
         public PeronModel()
         {
-           
+            var a = 0;
         }
     }
 }
