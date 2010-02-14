@@ -4,12 +4,14 @@
         Title="MainWindow" Height="350" Width="525">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
             <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
         <Label Name="rubyLabel"/>
-        <Label Grid.Row="1" Name="pythonLabel" Content="{Binding notify}"/>
-        <Button Grid.Row="2" Click="Button_Click" Content="notify" Margin="30" />
+        <Label Grid.Row="1" Name="pythonLabel" Content="{Binding notify.DataValue}"/>
+        <Button Grid.Row="2" Name="button" Click="Button_Click" Content="notify" Margin="30" />
+        <ListView Grid.Row="3" Name="list" ItemsSource="{Binding list}" Margin="30,0,30,10"/>
     </Grid>
 </Window>

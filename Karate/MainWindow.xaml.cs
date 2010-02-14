@@ -19,6 +19,7 @@ using NHibernate;
 using Karate.Data;
 using Karate.Models;
 using Karate.Data.Entities;
+using IronRuby.Builtins;
 
 namespace Karate
 {
@@ -49,9 +50,10 @@ namespace Karate
             var test2 = ruby.Globals.GetVariable("Test2");
             var t2 = ruby.Operations.CreateInstance(test2);
 
-            t2.notify = "TEST";
+            //t2.notify = "TEST";
 
             pythonLabel.DataContext = t2;
+            list.DataContext = t2;
 
             spit.hibernate();
         }
@@ -59,7 +61,7 @@ namespace Karate
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             dynamic t = pythonLabel.DataContext;
-            t.notify = "NOTIFIED!";
+            t.notify.DataValue = MutableString.Create("NOTIFIED!", RubyEncoding.Default);
         }
     }
 }
