@@ -9,8 +9,8 @@
             <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
-        <Label Name="rubyLabel"/>
-        <Label Grid.Row="1" Name="pythonLabel" Content="{Binding notify.DataValue}"/>
+        <Label Name="rubyLabel" Content="{Binding name.IsDirty}"/>
+        <Label Grid.Row="1" Name="pythonLabel" Content="{Binding name.data_value}"/>
         <Button Grid.Row="2" Name="button" Click="Button_Click" Content="notify" Margin="30" />
         <ListView Grid.Row="3" Name="list" ItemsSource="{Binding list}" Margin="30,0,30,10"/>
     </Grid>
