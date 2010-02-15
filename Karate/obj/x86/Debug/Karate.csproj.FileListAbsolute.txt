@@ -31,3 +31,4 @@ C:\Users\qb\Documents\Visual Studio 2010\Projects\Karate\Karate\bin\Debug\Micros
 C:\Users\qb\Documents\Visual Studio 2010\Projects\Karate\Karate\bin\Debug\model.rb
 C:\Users\qb\Documents\Visual Studio 2010\Projects\Karate\Karate\obj\x86\Debug\Views\AddEditPersonView.baml
 C:\Users\qb\Documents\Visual Studio 2010\Projects\Karate\Karate\obj\x86\Debug\Views\AddEditPersonView.g.cs
+C:\Users\qb\Documents\Visual Studio 2010\Projects\Karate\Karate\bin\Debug\view_model.rb

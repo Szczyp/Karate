@@ -126,7 +126,9 @@
     <None Include="model.rb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="view_model.rb" />
+    <None Include="view_model.rb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Karate.Data\Karate.Data.csproj">
