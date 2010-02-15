@@ -17,7 +17,6 @@ using IronRuby;
 
 using NHibernate;
 using Karate.Data;
-using Karate.Models;
 using Karate.Data.Entities;
 using IronRuby.Builtins;
 using Cinch;
@@ -35,7 +34,7 @@ namespace Karate
             InitializeComponent();
 
             var ruby = Ruby.CreateRuntime();
-            dynamic spit = ruby.UseFile("spit.rb");
+            dynamic model = ruby.UseFile("model.rb");
 
             var personModel = ruby.Globals.GetVariable("PersonModel");
             var p = ruby.Operations.CreateInstance(personModel);

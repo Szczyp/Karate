@@ -23,9 +23,11 @@ C:\Users\qb\Documents\Visual Studio 2010\Projects\Karate\Karate\obj\x86\Debug\Ge
 C:\Users\qb\Documents\Visual Studio 2010\Projects\Karate\Karate\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\qb\Documents\Visual Studio 2010\Projects\Karate\Karate\obj\x86\Debug\Karate.exe
 C:\Users\qb\Documents\Visual Studio 2010\Projects\Karate\Karate\obj\x86\Debug\Karate.pdb
-C:\Users\qb\Documents\Visual Studio 2010\Projects\Karate\Karate\bin\Debug\spit.rb
 C:\Users\qb\Documents\Visual Studio 2010\Projects\Karate\Karate\bin\Debug\Cinch.dll
 C:\Users\qb\Documents\Visual Studio 2010\Projects\Karate\Karate\bin\Debug\Microsoft.Practices.Unity.dll
 C:\Users\qb\Documents\Visual Studio 2010\Projects\Karate\Karate\bin\Debug\SLF.dll
 C:\Users\qb\Documents\Visual Studio 2010\Projects\Karate\Karate\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
 C:\Users\qb\Documents\Visual Studio 2010\Projects\Karate\Karate\bin\Debug\Microsoft.Practices.ObjectBuilder2.dll
+C:\Users\qb\Documents\Visual Studio 2010\Projects\Karate\Karate\bin\Debug\model.rb
+C:\Users\qb\Documents\Visual Studio 2010\Projects\Karate\Karate\obj\x86\Debug\Views\AddEditPersonView.baml
+C:\Users\qb\Documents\Visual Studio 2010\Projects\Karate\Karate\obj\x86\Debug\Views\AddEditPersonView.g.cs

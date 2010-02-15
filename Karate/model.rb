@@ -1,5 +1,3 @@
-require 'Karate'
-require 'Karate.Data'
 require 'Cinch'
 
 module EditableValidatingObjectExtensions	
@@ -22,7 +20,6 @@ module EditableValidatingObjectExtensions
 
 	def initialize *params, &block
 		super
-
 	end
 end
 
@@ -48,6 +45,8 @@ class PersonModel < Cinch::EditableValidatingObject
 	def initialize
 		super
 
+		puts instance_variables.join "\n"
+
 		self.list = ['a', 'b', 3, 4]
 
 		self.name = DataWrapper.new
@@ -55,7 +54,7 @@ class PersonModel < Cinch::EditableValidatingObject
 
 		@data_wrappers = [@name, @address]
 
-		self.address.data_value = "ADDRESS"
 		self.name.data_value = "NAME"
+		self.address.data_value = "ADDRESS"
 	end
 end
