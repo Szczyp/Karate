@@ -20,6 +20,8 @@ using Karate.Data;
 using Karate.Models;
 using Karate.Data.Entities;
 using IronRuby.Builtins;
+using Cinch;
+
 
 namespace Karate
 {

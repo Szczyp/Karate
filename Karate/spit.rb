@@ -44,27 +44,37 @@ class Test
 	end
 end
 
-module EditableValidatingObjectExtensions
-	def notified_attr_accessor *names
-		attr_reader *names
-		names.each do |name|
-			define_method "#{name}=" do |value|
-				instance_variable_set "@#{name}", value
-				NotifyPropertyChanged name
+module EditableValidatingObjectExtensions	
+	module ClassMethods
+		def notified_attr_accessor *names
+			attr_reader *names
+			names.each do |name|
+				define_method "#{name}=" do |value|
+					instance_variable_set "@#{name}", value
+					NotifyPropertyChanged name
+				end
 			end
 		end
 	end
-end
 
-class Cinch::EditableValidatingObject
-	extend EditableValidatingObjectExtensions
+	def self.included base
+		base.extend ClassMethods
+	end
+
+	def initialize *params, &block
+		super
+
+	end
 end
 
 class Test2 < Cinch::EditableValidatingObject
-	
+	include EditableValidatingObjectExtensions
+
 	notified_attr_accessor :notify, :list
 
 	def initialize
+		super
+
 		self.list = ['a', 'b', 3, 4, Test.new]
 		self.notify = Cinch::DataWrapper[String].new
 		self.notify.data_value = "TEST"
