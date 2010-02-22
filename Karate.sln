@@ -8,7 +8,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dlls", "dlls", "{06811708-A
 		dll\Antlr3.Runtime.dll = dll\Antlr3.Runtime.dll
 		dll\Castle.Core.dll = dll\Castle.Core.dll
 		dll\Castle.DynamicProxy2.dll = dll\Castle.DynamicProxy2.dll
-		dll\Cinch.dll = dll\Cinch.dll
 		dll\FluentNHibernate.dll = dll\FluentNHibernate.dll
 		dll\Iesi.Collections.dll = dll\Iesi.Collections.dll
 		dll\IronRuby.dll = dll\IronRuby.dll

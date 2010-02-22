@@ -56,27 +56,45 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40" />
-            <RowDefinition Height="40"/>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
         </Grid.RowDefinitions>
         
         <StackPanel Grid.Row="0" Margin="5" Orientation="Horizontal">
             <Label Content="Name" FontWeight="Normal" FontSize="11" Width="100"/>
             <TextBox FontWeight="Normal" FontSize="11" Width="150" Margin="10,0,0,0"
-                        Text="{Binding Path=current_customer.name.data_value,
+                        Text="{Binding Path=current_person.name.data_value,
                         UpdateSourceTrigger=LostFocus, ValidatesOnDataErrors=True,
                         ValidatesOnExceptions=True}"
                         Style="{StaticResource ValidatingTextBox}"
-                        IsEnabled="{Binding Path=current_customer.name.IsEditable}"/>
+                        IsEnabled="{Binding Path=current_person.name.IsEditable}"/>
         </StackPanel>
 
         <StackPanel Grid.Row="1" Margin="5" Orientation="Horizontal">
             <Label Content="Address" FontWeight="Normal" FontSize="11" Width="100"/>
             <TextBox FontWeight="Normal" FontSize="11" Width="150" Margin="10,0,0,0"
-                        Text="{Binding Path=current_customer.address.data_value,
+                        Text="{Binding Path=current_person.address.data_value,
                         UpdateSourceTrigger=LostFocus, ValidatesOnDataErrors=True,
                         ValidatesOnExceptions=True}"
                         Style="{StaticResource ValidatingTextBox}"
-                        IsEnabled="{Binding Path=current_customer.address.IsEditable}"/>
+                        IsEnabled="{Binding Path=current_person.address.IsEditable}"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" VerticalAlignment="Top"
+                    Margin="40,0,0,0">
+            <Button Content="Save" HorizontalAlignment="Center"
+			    VerticalAlignment="Center" Margin="0,0,0,0"
+			    Width="90" Height="30"
+                Command="{Binding save_person_command}"/>
+            <Button Content="Edit" HorizontalAlignment="Center"
+			    VerticalAlignment="Center" Margin="10,0,0,0"
+			    Width="90" Height="30"
+                Command="{Binding edit_person_command}"/>
+            <Button Content="Cancel" HorizontalAlignment="Center"
+			    VerticalAlignment="Center" Margin="10,0,0,0"
+			    Width="90" Height="30"
+                Command="{Binding cancel_person_command}"/>
+
         </StackPanel>
     </Grid>
 </UserControl>

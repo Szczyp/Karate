@@ -1,6 +1,6 @@
 require 'Cinch'
 
-module EditableValidatingObjectExtensions	
+module NotifiedAttributeAccessorExtension
 	module ClassMethods
 		def notified_attr_accessor *names
 			attr_reader *names
@@ -24,7 +24,7 @@ module EditableValidatingObjectExtensions
 end
 
 class DataWrapper < Cinch::DataWrapperBase
-	include EditableValidatingObjectExtensions
+	include NotifiedAttributeAccessorExtension
 
 	notified_attr_accessor :data_value
 
@@ -38,23 +38,25 @@ class DataWrapper < Cinch::DataWrapperBase
 end
 
 class PersonModel < Cinch::EditableValidatingObject
-	include EditableValidatingObjectExtensions
+	include NotifiedAttributeAccessorExtension
 
-	notified_attr_accessor :name, :address, :list
+	notified_attr_accessor :name, :address, :data_wrappers
 
 	def initialize
 		super
 
-		puts instance_variables.join "\n"
-
-		self.list = ['a', 'b', 3, 4]
-
 		self.name = DataWrapper.new
+		self.name.add_rule Cinch::SimpleRule.new "DataValue", "name can't be empty", System::Func[Object, System::Boolean].new { |object| puts "lol"; object.DataValue.empty? }
 		self.address = DataWrapper.new
 
-		@data_wrappers = [@name, @address]
+		self.data_wrappers = [@name, @address]
 
-		self.name.data_value = "NAME"
-		self.address.data_value = "ADDRESS"
+
+	end
+
+	def IsValid
+		puts "validating"
+		self.data_wrappers.all? { |wrapper| wrapper.IsValid }
+		false
 	end
 end

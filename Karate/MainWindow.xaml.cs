@@ -34,20 +34,16 @@ namespace Karate
             InitializeComponent();
 
             var ruby = Ruby.CreateRuntime();
-            dynamic model = ruby.UseFile("model.rb");
+            dynamic scope = ruby.UseFile("view_model.rb");
 
-            var personModel = ruby.Globals.GetVariable("PersonModel");
-            var p = ruby.Operations.CreateInstance(personModel);
+            var view_model = ruby.Operations.CreateInstance(ruby.Globals.GetVariable("AddEditPersonViewModel"));
+            var person_model = ruby.Operations.CreateInstance(ruby.Globals.GetVariable("PersonModel"));
 
-            rubyLabel.DataContext = p;
-            pythonLabel.DataContext = p;
-            list.DataContext = p;
-        }
+            view_model.current_person = person_model;
+            person_model.name.data_value = "Hitler";
+            person_model.address.data_value = "Berlin";
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            dynamic p = pythonLabel.DataContext;
-            p.name.data_value = MutableString.Create("NOTIFIED!", RubyEncoding.Default);
+            this.DataContext = view_model;
         }
     }
 }
