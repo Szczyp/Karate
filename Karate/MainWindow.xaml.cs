@@ -44,6 +44,7 @@ namespace Karate
             person_model.address.data_value = "Berlin";
 
             this.DataContext = view_model;
+            label.DataContext = person_model;
         }
     }
 }

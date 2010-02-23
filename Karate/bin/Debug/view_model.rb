@@ -36,8 +36,6 @@ class AddEditPersonViewModel < Cinch::ViewModelBase
 		self.cancel_person_command = Cinch::SimpleCommand.new
 		self.cancel_person_command.can_execute_delegate = System::Predicate[Object].new { self.current_person != nil }
 		self.cancel_person_command.execute_delegate = System::Action[Object].new { self.current_person = nil }
-
-		puts Test.new.IsValid
 	end
 end
 
